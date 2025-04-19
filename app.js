@@ -1,3 +1,4 @@
+
 var spanElm = document.getElementById('show');
 var inputElm = document.getElementById('userInput');
 
@@ -6,8 +7,12 @@ function valueToSet(btnValue) {
 
   if (btnValue === '=') {
     try {
+      if (inputValue.trim() === '') {
+        inputElm.value = '0'; // or 'Error' if you prefer
+        return;
+      }
       let result = eval(inputValue);
-      inputElm.value = result;
+      inputElm.value = result !== undefined ? result : 'Error';
     } catch (e) {
       inputElm.value = 'Error';
     }
