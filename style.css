@@ -1,0 +1,93 @@
+:root {
+    --bg-color: #222;
+    --text-color: white;
+    --button-bg: #444;
+    --button-hover: #666;
+  }
+  
+  body.light-mode {
+    --bg-color: #f1f1f1;
+    --text-color: black;
+    --button-bg: #ddd;
+    --button-hover: #bbb;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle {
+    margin-bottom: 15px;
+  }
+
+
+  .theme-toggle button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+  }
+  
+  .calculator {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 300px;
+  }
+  
+  .display-label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #userInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  button:active {
+    background-color: #888;
+  }
